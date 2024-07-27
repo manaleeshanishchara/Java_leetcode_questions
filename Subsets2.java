@@ -5,18 +5,18 @@ class Subsets2 {
     public static void main(String[] args) {
 
         int[] nums = { 1, 2, 3 };
-        List<List<Integer>> answer = backtrack(nums);
+        List<List<Integer>> answer = subsets(nums);
         System.out.println("answer: " + answer);
 
     }
 
-    public List<List<Integer>> subsets(int[] nums) {
+    public static List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         backtrack(new ArrayList<>(), 0, ans, nums);
         return ans;
     }
 
-    public void backtrack(List<Integer> curr, int i, List<List<Integer>> ans, int[] nums) {
+    public static void backtrack(List<Integer> curr, int i, List<List<Integer>> ans, int[] nums) {
         if (i > nums.length) {
             return;
         }
