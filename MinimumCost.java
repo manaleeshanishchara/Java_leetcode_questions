@@ -15,6 +15,9 @@ public class MinimumCost {
             adjacencyList[i] = new ArrayList<>();
         }
 
+        System.out.println("adjacencyList "+adjacencyList);
+        System.exit(0);
+
         // Populate the adjacency list with character conversions
         int conversionCount = original.length;
         for (int i = 0; i < conversionCount; i++) {
